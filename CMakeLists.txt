@@ -146,6 +146,15 @@ GMDS_ADD_COMPONENT(
 )
 
 GMDS_ADD_COMPONENT(
+        ANTCOLONY                       # cmake variable
+        ant-colony                        # src subdirectory name
+        GMDSAntColony                    # name of the generated library
+        "Ant Colony optimisation (Valentin PHD)"  # description
+        ON                                 # is activated
+        OFF                                 # must be covered
+)
+
+GMDS_ADD_COMPONENT(
         CLAIRE                       # cmake variable
         claire                        # src subdirectory name
         GMDSClaire                    # name of the generated library
