@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-git clone https://github.com/spack/spack.git
+git clone --depth=1 -b v0.20.3 https://github.com/spack/spack.git
 
 #replace the default configuration file of spack by a simpler one without hash, compiler versions, tags and so on 
 cp /Users/runner/work/gmds/gmds/.github/workflows/misc/config-0.20.3.yaml /Users/runner/work/gmds/gmds/spack/etc/spack/defaults/config.yaml
@@ -13,4 +13,4 @@ spack repo add ./spack_recipes/meshing_repo
 spack repo add ./spack_recipes/supersede_repo
 
 spack external find cmake
-spack install --only dependencies gmds+blocking~cgns
+spack install --only dependencies gmds+blocking~cgns ^python@3.10.10
